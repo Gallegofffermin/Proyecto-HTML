@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini Guía SQL</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-oscuro">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                Mini Guía SQL
+            </a>
+
+            <div class="navbar-nav">
+                <a class="nav-link active" href="index.html">Inicio</a>
+                <a class="nav-link" href="consultas.html">Consultas</a>
+                <a class="nav-link" href="creacion_tablas.html">Creación de tablas</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    <div class="container text-center my-5">
+
+        <img src="logo_sql.svg" alt="Logo SQL" width="120" class="svg-blanco mb-3">
+
+        <h1 class="display-4 fw-bold">Mini Guía SQL</h1>
+
+        <p class="lead text-secondary">
+            Una introducción sencilla al lenguaje SQL y las bases de datos relacionales.
+        </p>
+
+        <hr class="my-4">
+
+    </div>
+
+
+
+    <div class="container my-4">
+
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+
+                <div class="card shadow-sm p-4">
+
+                    <h2>¿Qué es SQL?</h2>
+
+                    <p>
+                        SQL (Structured Query Language) es un lenguaje utilizado
+                        para trabajar con bases de datos relacionales.
+                    </p>
+
+                    <p>
+                        En una base de datos relacional, la información se organiza
+                        principalmente en tablas. Estas tablas están formadas por
+                        columnas y filas.
+                    </p>
+
+                    <p>
+                        Las columnas representan los campos o características
+                        de los datos, mientras que las filas representan los
+                        registros almacenados.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="container my-4">
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="card shadow-sm p-4 h-100">
+
+                    <h3>Tabla</h3>
+
+                    <p>
+                        Es donde se almacenan los datos de una determinada
+                        entidad o tema.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card shadow-sm p-4 h-100">
+
+                    <h3>Registro</h3>
+
+                    <p>
+                        Es una fila de la tabla que contiene los datos
+                        correspondientes a un elemento.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card shadow-sm p-4 h-100">
+
+                    <h3>Campo</h3>
+
+                    <p>
+                        Es una columna que representa una característica
+                        de los registros.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="container my-5">
+
+        <div class="card shadow-sm p-4">
+
+            <h2>Ejemplo de una tabla</h2>
+
+            <p>
+                Una tabla de personas podría tener la siguiente estructura:
+            </p>
+
+            <div class="table-responsive">
+
+                <table class="table table-dark table-striped">
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>DNI</th>
+                            <th>Fecha de nacimiento</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td>Jorge Alberdi</td>
+                            <td>11384726</td>
+                            <td>1965-03-17</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Marcos Zidane</td>
+                            <td>14306718</td>
+                            <td>1968-09-04</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="container my-4">
+
+        <div class="alert-verde p-4 rounded">
+
+            <h3>🔑 Llave primaria</h3>
+
+            <p class="mb-0">
+                Una PRIMARY KEY permite identificar de forma única cada
+                registro de una tabla. En este ejemplo, el campo ID puede
+                utilizarse como llave primaria.
+            </p>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

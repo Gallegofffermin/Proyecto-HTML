@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Consultas - Mini Guía SQL</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-oscuro">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                Mini Guía SQL
+            </a>
+
+            <div class="navbar-nav">
+                <a class="nav-link" href="index.html">Inicio</a>
+                <a class="nav-link active" href="consultas.html">Consultas</a>
+                <a class="nav-link" href="creacion_tablas.html">
+                    Creación de tablas
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- Título -->
+    <div class="container text-center my-5">
+
+        <h1 class="display-4 fw-bold">
+            Consultas SQL
+        </h1>
+
+        <p class="lead text-secondary">
+            Una introducción a las consultas y al manejo de registros.
+        </p>
+
+        <hr class="my-4">
+
+    </div>
+
+
+    <!-- Introducción -->
+    <div class="container my-4">
+
+        <div class="row">
+            <div class="col-md-9 mx-auto">
+
+                <div class="card shadow-sm p-4">
+
+                    <h2>¿Qué son las consultas?</h2>
+
+                    <p>
+                        Las consultas son una de las principales formas de
+                        obtener información de los registros almacenados
+                        en las tablas.
+                    </p>
+
+                    <p class="mb-0">
+                        Mediante SQL podemos seleccionar determinados campos,
+                        filtrar registros y ordenar los resultados.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- INSERT -->
+    <div class="container my-4">
+
+        <div class="row">
+            <div class="col-md-9 mx-auto">
+
+                <div class="card shadow-sm p-4">
+
+                    <h2>Creación de registros</h2>
+
+                    <p>
+                        <code>INSERT INTO</code> se utiliza para agregar
+                        nuevos registros a una tabla.
+                    </p>
+
+                    <p>
+                        Primero indicamos el nombre de la tabla y los campos
+                        que queremos completar. Luego, mediante
+                        <code>VALUES</code>, indicamos los valores
+                        correspondientes.
+                    </p>
+
+                    <pre><code>INSERT INTO personas
+    (id, nombre, dni, fecha_nacimiento)
+VALUES
+    (1, 'Jorge Alberdi', 11384726, '1965-03-17'),
+    (2, 'Marcos Zidane', 14306718, '1968-09-04');</code></pre>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- SELECT -->
+    <div class="container my-4">
+
+        <div class="row">
+            <div class="col-md-9 mx-auto">
+
+                <div class="card shadow-sm p-4">
+
+                    <h2>SELECT</h2>
+
+                    <p>
+                        <code>SELECT</code> permite indicar qué campos
+                        queremos obtener de una tabla.
+                    </p>
+
+                    <p>
+                        Una consulta básica puede seguir esta estructura:
+                    </p>
+
+                    <pre><code>SELECT campo_a, campo_b
+FROM tabla
+WHERE campo_a condicion
+ORDER BY campo_b ASC;</code></pre>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Tabla ejemplo -->
+    <div class="container my-4">
+
+        <div class="row">
+            <div class="col-md-9 mx-auto">
+
+                <div class="card shadow-sm p-4">
+
+                    <h2>Tabla de ejemplo</h2>
+
+                    <p>
+                        Supongamos que tenemos una tabla llamada
+                        <code>personas</code>:
+                    </p>
+
+                    <div class="table-responsive">
+
+                        <table class="table table-dark table-striped">
+
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>DNI</th>
+                                    <th>Fecha de nacimiento</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td>Jorge Alberdi</td>
+                                    <td>11384726</td>
+                                    <td>1965-03-17</td>
+                                </tr>
+
+                                <tr>
+                                    <td>2</td>
+                                    <td>Marcos Zidane</td>
+                                    <td>14306718</td>
+                                    <td>1968-09-04</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- WHERE -->
+    <div class="container my-4">
+
+        <div class="row">
+            <div class="col-md-9 mx-auto">
+
+                <div class="card shadow-sm p-4">
+
+                    <h2>WHERE</h2>
+
+                    <p>
+                        <code>WHERE</code> permite establecer una condición
+                        para filtrar los registros que queremos obtener.
+                    </p>
+
+                    <pre><code>SELECT nombre, dni
+FROM personas
+WHERE dni &gt; 12000000;</code></pre>
+
+                    <p>
+                        En este caso solamente se obtendrán las personas
+                        cuyo DNI sea mayor a <code>12000000</code>.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ORDER BY -->
+    <div class="container my-4">
+
+        <div class="row">
+            <div class="col-md-9 mx-auto">
+
+                <div class="card shadow-sm p-4">
+
+                    <h2>ORDER BY</h2>
+
+                    <p>
+                        <code>ORDER BY</code> permite ordenar los resultados
+                        de una consulta.
+                    </p>
+
+                    <p>
+                        Podemos utilizar <code>ASC</code> para ordenar de
+                        forma ascendente o <code>DESC</code> para hacerlo
+                        de forma descendente.
+                    </p>
+
+                    <pre><code>SELECT nombre, dni
+FROM personas
+WHERE dni &gt; 12000000
+ORDER BY nombre ASC;</code></pre>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+</html>
